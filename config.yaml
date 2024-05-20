@@ -1,0 +1,8 @@
+offset_x: 5           # width of the trigger window
+offset_y: 5           # height of the trigger window
+trigger_key: 'shift'  # key that triggers the plugin
+shot_key: 'P'         # alternate key for firing
+sleep_before: 0.005   # delay before firing
+sleep_after: 0.001    # delay after firing
+threshold: 5        # threshold for detection
+icon_path: G:\V\Kaixin-Icon_33953.png
