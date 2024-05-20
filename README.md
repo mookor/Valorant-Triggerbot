@@ -5,6 +5,7 @@ A trigger with a very high reaction rate
 - it works really fast: 1000 scans per second
 - Now works only with red enemies
 - You don't need python to run, there is a compiled .exe version
+- The executable file can be found in the Releases tab
 
 ## Usage
 1. Assign an alternative shot key in the game, also specify the same button in `config.yaml`
