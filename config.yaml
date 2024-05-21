@@ -5,4 +5,4 @@ shot_key: 'P'         # alternate key for firing
 sleep_before: 0.005   # delay before firing
 sleep_after: 0.001    # delay after firing
 threshold: 5        # threshold for detection
-icon_path: G:\V\Kaixin-Icon_33953.png
+icon_path: icon.png
