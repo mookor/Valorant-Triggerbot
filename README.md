@@ -1,4 +1,5 @@
-# Valorant Triggerbot![logo](icon.png "Valorant Triggerbot icon")
+[logo](icon.png "Valorant Triggerbot icon")
+# Valorant Triggerbot!
 High-speed, low-latency triggerbot for Valorant using pixel-based detection (MSS + NumPy). Optimized for low CPU usage and configurable capture rate.
 
 ## Table of Contents
