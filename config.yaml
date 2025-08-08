@@ -6,3 +6,4 @@ sleep_before: 0.005   # delay before firing
 sleep_after: 0.001    # delay after firing
 threshold: 5        # threshold for detection
 icon_path: icon.png
+target_hz: 240        # screen capture frequency limit (Hz)
