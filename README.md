@@ -1,26 +1,62 @@
 # Valorant Trigger ![logo](icon.png)
-A trigger with a very high reaction rate
+Lightweight screen-trigger with high reaction speed and low CPU usage.
 
 ## About
-- it works really fast: 1000 scans per second
-- Now works only with red enemies
-- You don't need python to run, there is a compiled .exe version
-- The executable file can be found in the Releases tab
+- Works around the crosshair only (small window at the center of the screen)
+- Optimized CPU usage: screen capture happens only while the trigger key is held
+- Configurable capture rate limit (`target_hz`) to balance speed and load
+- Currently detects only red targets
+- Windows only. A compiled .exe may be available in Releases
+
+## Installation
+1. Install Python 3.10+ on Windows
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. (Optional) Run terminal as Administrator for proper global hotkeys support
+
+## Configuration
+All runtime options live in `config.yaml`:
+
+```yaml
+offset_x: 5           # half-width of the detection window (in pixels)
+offset_y: 5           # half-height of the detection window (in pixels)
+trigger_key: 'shift'  # key that enables capture and firing logic while held
+shot_key: 'P'         # in-game alternative fire key (bind the same in the game)
+sleep_before: 0.005   # delay before firing (seconds)
+sleep_after: 0.001    # delay after firing (seconds)
+threshold: 5          # red intensity threshold to trigger a shot
+icon_path: icon.png   # tray icon path
+target_hz: 240        # screen capture frequency limit (Hz)
+```
+
+Notes:
+- The detection window size is `(offset_x*2) x (offset_y*2)` pixels, centered on the screen
+- Lower `target_hz` and/or the offsets to reduce CPU usage
+- Increase `threshold` to make the trigger less sensitive, decrease to make it more sensitive
 
 ## Usage
-1. Assign an alternative shot key in the game, also specify the same button in `config.yaml`
-For example, if you have identified the alternative button for the shot as "p", then we leave in the config: `shot_key: 'p'`
-2. select a convenient button for triggering the trigger and assign it to. For example: `trigger_key: 'shift'`
-3. the trigger will only be triggered when the trigger_key is pressed
-4. Also, you can set a delay time before the shot and a pause after
-5. to close the application, simply select the appropriate field in the tray
+1. In Valorant, bind an alternative fire key (e.g., `P`), and set the same key in `config.yaml` → `shot_key: 'P'`
+2. Set the trigger key you prefer (defaults to `shift`) → `trigger_key: 'shift'`
+3. Launch the app:
+   ```bash
+   python main.py
+   ```
+4. Hold the trigger key to enable detection and auto-fire
+5. To exit, use the tray icon menu → Exit
 
+## Performance Tips
+- Reduce `offset_x/offset_y` to shrink the capture area
+- Tune `target_hz` (e.g., 120–300) to match your CPU budget and desired responsiveness
+- Keep `sleep_before/sleep_after` minimal for fastest reaction, but adjust to avoid double-firing
 
-## Can I be banned?
-Yes, of course they can, any software you use is at your own risk
+## FAQ
+### Can I be banned?
+Yes. Use at your own risk. Any third-party assistance can lead to penalties.
 
-## Why did I release this?
-There have been a lot of cheaters in the game lately, I hope that the release of such software will give the developer more information about cheats so that they can handle it.
+### Why release this?
+Educational purposes. Increased transparency can help developers understand and handle such tools.
 
-## Can I use this cheat?
-Yes, you can, but please don't do it, let's not spoil the game
+### Can I use this cheat?
+Technically yes, but please don’t. Don’t ruin the game for others.
