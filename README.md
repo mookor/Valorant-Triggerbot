@@ -1,4 +1,4 @@
-# Valorant Triggerbot (Auto Fire, Pixel Bot) for Windows — Python ![logo](icon.png "Valorant Triggerbot icon")
+# Valorant Triggerbot![logo](icon.png "Valorant Triggerbot icon")
 High-speed, low-latency triggerbot for Valorant using pixel-based detection (MSS + NumPy). Optimized for low CPU usage and configurable capture rate.
 
 ## Table of Contents
